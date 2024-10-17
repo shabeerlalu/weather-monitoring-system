@@ -1,0 +1,18 @@
+<canvas id="temperatureChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('temperatureChart').getContext('2d');
+    const temperatureData = <%= JSON.stringify(weatherData.map(data => data.temperature)) %>;
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [...Array(temperatureData.length).keys()],
+            datasets: [{
+                label: 'Temperature',
+                data: temperatureData
+            }]
+        }
+    });
+</script>
