@@ -43,6 +43,7 @@ This is a real-time weather monitoring system built using **Node.js**, **Express
    npm install
 
 3. **Setting up Environment**:
+    ```bash
    PORT=3000
    MONGO_URI=mongodb://localhost:27017/weatherDB  # Replace with your MongoDB connection string
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key  # Replace with your OpenWeatherMap API Key
